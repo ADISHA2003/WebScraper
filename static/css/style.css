@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box; /* Ensures padding and borders are included in the total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9; /* Light background for better contrast */
+}
+
+.container {
+    text-align: center;
+    width: 90%; /* Makes the container responsive */
+    max-width: 600px; /* Limits maximum width on larger screens */
+    padding: 20px; /* Adds some padding around the container */
+    background-color: white; /* White background for the form */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Light border for input */
+    border-radius: 4px; /* Slightly rounded corners */
+    transition: border-color 0.3s; /* Smooth transition for focus state */
+}
+
+input[type="text"]:focus {
+    border-color: #007BFF; /* Highlight border on focus */
+    outline: none; /* Removes default outline */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none; /* Removes default border */
+    border-radius: 4px; /* Slightly rounded corners */
+    background-color: #007BFF; /* Primary button color */
+    color: white; /* Text color for the button */
+    transition: background-color 0.3s; /* Smooth transition for hover state */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#notifications {
+    color: green;
+    margin: 10px 0;
+    font-weight: bold; /* Makes notifications stand out */
+}
+
+#output {
+    background-color: #f4f4f4;
+    padding: 15px;
+    overflow-x: auto;
+    max-height: 300px;
+    border-radius: 4px; /* Slightly rounded corners */
+    border: 1px solid #ccc; /* Light border for output area */
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    input[type="text"] {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    button {
+        width: 100%; /* Full width buttons on smaller screens */
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Website Scraper</h1>
+        <input type="text" id="urlInput" placeholder="Enter URL to scrape" required>
+        <button onclick="startScraping()">Start Scraping</button>
+        <div id="notifications"></div>
+
+        <h2>Scraped Data</h2>
+        <pre id="output"></pre>
+
+        <div class="download-buttons">
+            <button onclick="downloadFile('json')">Download JSON</button>
+            <button onclick="downloadFile('excel')">Download Excel</button>
+            <button onclick="downloadFile('csv')">Download CSV</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
